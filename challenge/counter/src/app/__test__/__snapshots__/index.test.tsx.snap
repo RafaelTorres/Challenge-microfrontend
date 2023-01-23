@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Root Page should render home page 1`] = `
+<div>
+  <main>
+    <h2>
+      Counter MF
+    </h2>
+    <p
+      class="counter-label"
+    >
+      0
+    </p>
+  </main>
+</div>
+`;
