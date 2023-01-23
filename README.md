@@ -22,8 +22,7 @@ Para ver la solucion es importante, correr los siguientes proyectos:
 
 El resultado seria como el siguiente acontinuación:
 
-![Image text](https://raw.github.com/RafaelTorres/repositpry/master/Challenge-microfrontend/ui.png)
-
+![Image text](https://github.com/RafaelTorres/Challenge-microfrontend/blob/master/ui.png)
 
 ### Adicionales
 
