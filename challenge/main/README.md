@@ -115,7 +115,7 @@ The Tools used in this development were as follows:
 ## License 📄
 
 <Add project license here></Add>
-See more in the [License section](../LICENSE).
+See more in the [License section](../../LICENSE).
 
 ## Author 👨🏻‍💻
 
