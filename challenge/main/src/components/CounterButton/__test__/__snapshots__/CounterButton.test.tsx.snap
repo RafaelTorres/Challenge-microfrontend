@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter Button should render the component 1`] = `
+<div>
+  <button
+    class="button"
+    type="button"
+  >
+    Add to Cart
+  </button>
+</div>
+`;
+
+exports[`Counter Button should render the component with custom label 1`] = `
+<div>
+  <button
+    class="button"
+    type="button"
+  >
+    Agregar item
+  </button>
+</div>
+`;

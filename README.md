@@ -1,26 +1,31 @@
 # Challenge: Crear una aplicación de microfrontend
 
+
 ### Contexto
 
-Construir una aplicación a partir de 2 microfrontends, que se comunican entre sí. La primera aplicación tendrá un botón que, al hacer clic, incrementará un contador. La segunda aplicación mostrará el valor actual del contador, actualizándolo cada vez que se haga clic en el botón.
+De acuerdo al [Challenge](./CHALLENGE.md) Se realizo la implementacion de una solucion en la cual se genera un contador, con el uso de la libreria `ReactJS` y la estrategia de Micro Frontend utilizando `Module Federation`
 
-#### Tarea
+### Solución
 
-1. Crear dos aplicaciones configurandola para que utilicen Module Federation.
-2. La primera aplicación debe tener un botón que al hacer clic incremente un contador.
-3. La segunda aplicación debe mostrar el valor actual del contador, actualizándolo cada vez que se haga clic en el botón de la primera aplicación.
+Se crearon dos proyectos haciendo uso del framework `NextJS`, el cual provee una configuracion ligera, eficiente y multifucional para desarrollar la solución sin agregar mucho boilerplate. 
 
-### Test
+Uno de los proyectos llamado [Counter](./challenge/counter) se utilizo como proyecto de piezas `remotas` donde se tiene un componente  presentacional que nos permite visualizar el incremento o decremento del valor que se le pase desde el proyecto `host`. El proyecto host llamado [Main](./challenge/main) contiene un componente presentacional el cual es un boton, una pagina para unir las pìezas locales y remotas y un state que guarda en memoria temporal el valor del contador que se le pasara a la pieza remota.
 
-Proporcione al menos una prueba para cada aplicación para verificar que el contador se está incrementando correctamente y que se está mostrando el valor correcto en la segunda aplicación.
+La implementación del `Module Federation` se realizo utilizando la libreria [@module-federation/nextjs-mf](https://github.com/module-federation/universe/tree/main#readme), la cual se debe configurar en el `next-config` de cada proyecto, una vez realizada la configuración y definidos los alias la pieza host puede cargar la pieza remota de forma asyncrona, para poderla usar en la prueba se hizo uso de la estrategia de Next llamada `dynamic`, la cual actua como `React.Lazy`, permitiendo cargar el chunk de la pieza bajo demanda y no desde de la carga inicial.
 
-### Entrega
+Con esta implementacion se pudo integrar el componente de visualizacion del conteo como si fuese parte del proyecto.
 
-Haga un fork del repositorio original y envíe su solución en su repositorio personal. Incluya un archivo README con las instrucciones para ejecutar su solución y los pasos de desarrollo de cada aplicación.
+Para ver la solucion es importante, correr los siguientes proyectos:
 
-### Aclaraciones
+* [Counter](./challenge/counter)
+* [Main](./challenge/main)
 
-- En este desafio, se espera que aplique lo que sabe sobre el desarrollo frontend y la implementación de microfrontends.
-- Por favor incluya comentarios y documentación en su código para ayudar a entender su solución.
-- Es importante que se siga los principios de buenas prácticas en programación para que sea legible y mantenible.
-- Es importante que se entregue una solución que funcione correctamente y cumpla con los requisitos especificados en el desafio.
+El resultado seria como el siguiente acontinuación:
+
+![Image text](https://raw.github.com/RafaelTorres/repositpry/master/Challenge-microfrontend/ui.png)
+
+
+### Adicionales
+
+* Se incluyeron unit test a nivel de componentes y paginas con el fin de probar la solción, coverage alcanzado 100%
+* Se agregaron scripts de procesos de CI, con el fin de validar y dar formato al codigo

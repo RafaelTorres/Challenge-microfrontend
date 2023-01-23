@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter Label should render the component 1`] = `
+<div>
+  <p
+    class="counter-label"
+  >
+    0
+  </p>
+</div>
+`;
+
+exports[`Counter Label should render the component with custom amount 1`] = `
+<div>
+  <p
+    class="counter-label"
+  >
+    1
+  </p>
+</div>
+`;

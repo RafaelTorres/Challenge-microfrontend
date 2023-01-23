@@ -1,0 +1,10 @@
+.counter-label {
+  border-radius: 50%;
+  border: 1px solid var(--border-color, black);
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
